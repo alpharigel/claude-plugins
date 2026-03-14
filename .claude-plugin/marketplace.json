@@ -1,0 +1,27 @@
+{
+  "name": "alpharigel-tools",
+  "owner": {
+    "name": "alpharigel",
+    "email": "jay@alpharigel.com"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by alpharigel"
+  },
+  "plugins": [
+    {
+      "name": "axe-ios-skill",
+      "source": {
+        "source": "github",
+        "repo": "alpharigel/axe-ios-skill"
+      },
+      "description": "Test and automate iOS apps in the Simulator using AXe CLI for accessibility-based UI automation",
+      "version": "1.0.0",
+      "author": {
+        "name": "alpharigel"
+      },
+      "license": "MIT",
+      "keywords": ["ios", "simulator", "testing", "axe", "accessibility"],
+      "category": "testing"
+    }
+  ]
+}
