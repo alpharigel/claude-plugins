@@ -22,6 +22,21 @@
       "license": "MIT",
       "keywords": ["ios", "simulator", "testing", "e2e", "accessibility"],
       "category": "testing"
+    },
+    {
+      "name": "web-e2e-skill",
+      "source": {
+        "source": "github",
+        "repo": "alpharigel/web-e2e-skill"
+      },
+      "description": "End-to-end web app testing for coding agents — Playwright setup, test patterns, and common recipes",
+      "version": "1.0.0",
+      "author": {
+        "name": "alpharigel"
+      },
+      "license": "MIT",
+      "keywords": ["web", "playwright", "testing", "e2e", "browser"],
+      "category": "testing"
     }
   ]
 }
