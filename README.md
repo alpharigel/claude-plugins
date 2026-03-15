@@ -1,6 +1,6 @@
 # alpharigel Agent Skills
 
-Reusable skills for coding agents. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code) and [OpenAI Codex CLI](https://github.com/openai/codex).
+Reusable skills for coding agents. Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [OpenAI Codex CLI](https://github.com/openai/codex), [Gemini CLI](https://github.com/google-gemini/gemini-cli), and [Cursor](https://cursor.com).
 
 ## Available Skills
 
@@ -10,6 +10,8 @@ Reusable skills for coding agents. Works with [Claude Code](https://docs.anthrop
 | [ios-feedback-skill](https://github.com/alpharigel/ios-feedback-skill) | Add an in-app feedback button with automatic GitHub issue creation |
 
 ## Setup
+
+Each skill uses a `SKILL.md` file with YAML frontmatter — a format supported natively by all four agents. Pick your agent below.
 
 ### Claude Code
 
@@ -27,24 +29,19 @@ Or install a skill directly by repo URL:
 /plugin add https://github.com/alpharigel/ios-feedback-skill
 ```
 
-Once installed, invoke a skill with its slash command (e.g. `/ios-feedback-button`).
+Invoke with `/skill-name` (e.g. `/ios-feedback-button`).
 
 ### OpenAI Codex CLI
 
-Codex uses the same `SKILL.md` format. To use these skills with Codex:
-
-**Option 1 — Clone into your project's `.agents/skills/` directory:**
+Clone into your project's `.agents/skills/` directory:
 
 ```bash
-# From your project root
 mkdir -p .agents/skills
 git clone https://github.com/alpharigel/ios-e2e-skill.git .agents/skills/ios-e2e-skill
 git clone https://github.com/alpharigel/ios-feedback-skill.git .agents/skills/ios-feedback-skill
 ```
 
-Codex auto-discovers skills in `.agents/skills/` and makes them available via `$skill-name`.
-
-**Option 2 — Copy just the SKILL.md into your project:**
+Or copy just the SKILL.md:
 
 ```bash
 mkdir -p .agents/skills/ios-feedback-button
@@ -52,16 +49,53 @@ curl -o .agents/skills/ios-feedback-button/SKILL.md \
   https://raw.githubusercontent.com/alpharigel/ios-feedback-skill/main/skills/ios-feedback-button/SKILL.md
 ```
 
-**Option 3 — Use as a personal skill (all projects):**
+For a personal skill (all projects): copy to `~/.codex/skills/`.
 
-Copy the skill directory to your Codex user config:
+Invoke with `$skill-name` (e.g. `$ios-feedback-button`).
+
+### Gemini CLI
+
+Clone into your project's `.gemini/skills/` directory:
 
 ```bash
-# Location varies by OS — check ~/.codex/ or Codex docs
-cp -r ios-feedback-skill/skills/ios-feedback-button ~/.codex/skills/
+mkdir -p .gemini/skills
+git clone https://github.com/alpharigel/ios-e2e-skill.git .gemini/skills/ios-e2e-skill
+git clone https://github.com/alpharigel/ios-feedback-skill.git .gemini/skills/ios-feedback-skill
 ```
 
-Once available, invoke with `$ios-feedback-button` in any Codex session.
+Or copy just the SKILL.md:
+
+```bash
+mkdir -p .gemini/skills/ios-feedback-button
+curl -o .gemini/skills/ios-feedback-button/SKILL.md \
+  https://raw.githubusercontent.com/alpharigel/ios-feedback-skill/main/skills/ios-feedback-button/SKILL.md
+```
+
+For a personal skill (all projects): copy to `~/.gemini/skills/`.
+
+Invoke with `/skill-name` (e.g. `/ios-feedback-button`).
+
+### Cursor
+
+Clone into your project's `.cursor/skills/` directory:
+
+```bash
+mkdir -p .cursor/skills
+git clone https://github.com/alpharigel/ios-e2e-skill.git .cursor/skills/ios-e2e-skill
+git clone https://github.com/alpharigel/ios-feedback-skill.git .cursor/skills/ios-feedback-skill
+```
+
+Or copy just the SKILL.md:
+
+```bash
+mkdir -p .cursor/skills/ios-feedback-button
+curl -o .cursor/skills/ios-feedback-button/SKILL.md \
+  https://raw.githubusercontent.com/alpharigel/ios-feedback-skill/main/skills/ios-feedback-button/SKILL.md
+```
+
+For a personal skill (all projects): copy to `~/.cursor/skills/`.
+
+Invoke with `/skill-name` (e.g. `/ios-feedback-button`).
 
 ## Skill format
 
@@ -79,7 +113,14 @@ skill-repo/
   LICENSE
 ```
 
-The `SKILL.md` file uses YAML frontmatter (`name`, `description`) followed by markdown instructions — this format is compatible with both Claude Code and Codex CLI.
+The `SKILL.md` file uses YAML frontmatter (`name`, `description`) followed by markdown instructions. This format is a de facto standard across Claude Code, Codex CLI, Gemini CLI, and Cursor — write once, use everywhere.
+
+| Agent | Project skills dir | Personal skills dir | Invoke |
+|-------|-------------------|---------------------|--------|
+| Claude Code | `.claude/skills/` | `~/.claude/skills/` | `/skill-name` |
+| Codex CLI | `.agents/skills/` | `~/.codex/skills/` | `$skill-name` |
+| Gemini CLI | `.gemini/skills/` | `~/.gemini/skills/` | `/skill-name` |
+| Cursor | `.cursor/skills/` | `~/.cursor/skills/` | `/skill-name` |
 
 ## License
 
