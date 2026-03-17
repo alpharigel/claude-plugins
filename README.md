@@ -1,27 +1,27 @@
 # Jay's Workflow and Agent Skills
 
-A product manager's toolkit for agentic coding. Reusable skills, a living workflow, and a community of builders figuring this out together.
+A product manager's toolkit for agentic coding — reusable skills and an evolving workflow for turning ideas into tangible solutions with AI coding agents.
 
-Works with [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [OpenAI Codex CLI](https://github.com/openai/codex), [Gemini CLI](https://github.com/google-gemini/gemini-cli), and [Cursor](https://cursor.com).
+**📋 [Read the full PM-AI Workflow →](WORKFLOW.md)** — my current best process for going from idea to shipped feature, kept up to date as tools evolve.
 
-## Start Here
+If you're coming from my [Substack](https://jaydermody.substack.com), welcome! The workflow doc is the best place to start. The skills below are the reusable building blocks that make it all go faster.
 
-**[WORKFLOW.md](WORKFLOW.md)** — My current best process for going from idea to tangible solution using AI coding agents. Covers environment setup, tech stack decisions, parallel development with worktrees, and the prompts I actually use. Kept up to date as things evolve.
+---
 
 ## Available Skills
-
-Skills are reusable instruction sets that teach your coding agent how to handle specific workflows. Install them once, use them across projects.
 
 | Skill | Description |
 |-------|-------------|
 | [ios-e2e-skill](https://github.com/alpharigel/ios-e2e-skill) | End-to-end iOS app testing — UI automation, simulator management, accessibility-driven interactions |
 | [ios-feedback-skill](https://github.com/alpharigel/ios-feedback-skill) | Add an in-app feedback button with automatic GitHub issue creation |
 
-Have a skill that's been useful for you? Please contribute it — open a PR or file an issue.
+Have a skill you'd like to share? Open a PR or issue — contributions welcome.
+
+---
 
 ## Setup
 
-Each skill uses a `SKILL.md` file with YAML frontmatter — a format supported natively by all four agents. Pick your agent below.
+Each skill uses a `SKILL.md` file with YAML frontmatter — a format supported natively by all major coding agents. Pick yours below.
 
 ### Claude Code
 
@@ -39,9 +39,10 @@ Or install a skill directly by repo URL:
 /plugin add https://github.com/alpharigel/ios-feedback-skill
 ```
 
-Invoke with `/skill-name` (e.g. `/ios-feedback-button`).
+Invoke with `/skill-name` (e.g., `/ios-feedback-button`).
 
-### OpenAI Codex CLI
+<details>
+<summary><strong>OpenAI Codex CLI</strong></summary>
 
 Clone into your project's `.agents/skills/` directory:
 
@@ -61,9 +62,12 @@ curl -o .agents/skills/ios-feedback-button/SKILL.md \
 
 For a personal skill (all projects): copy to `~/.codex/skills/`.
 
-Invoke with `$skill-name` (e.g. `$ios-feedback-button`).
+Invoke with `$skill-name` (e.g., `$ios-feedback-button`).
 
-### Gemini CLI
+</details>
+
+<details>
+<summary><strong>Gemini CLI</strong></summary>
 
 Clone into your project's `.gemini/skills/` directory:
 
@@ -83,9 +87,12 @@ curl -o .gemini/skills/ios-feedback-button/SKILL.md \
 
 For a personal skill (all projects): copy to `~/.gemini/skills/`.
 
-Invoke with `/skill-name` (e.g. `/ios-feedback-button`).
+Invoke with `/skill-name` (e.g., `/ios-feedback-button`).
 
-### Cursor
+</details>
+
+<details>
+<summary><strong>Cursor</strong></summary>
 
 Clone into your project's `.cursor/skills/` directory:
 
@@ -105,7 +112,11 @@ curl -o .cursor/skills/ios-feedback-button/SKILL.md \
 
 For a personal skill (all projects): copy to `~/.cursor/skills/`.
 
-Invoke with `/skill-name` (e.g. `/ios-feedback-button`).
+Invoke with `/skill-name` (e.g., `/ios-feedback-button`).
+
+</details>
+
+---
 
 ## Skill Format
 
@@ -123,7 +134,7 @@ skill-repo/
   LICENSE
 ```
 
-The `SKILL.md` file uses YAML frontmatter (`name`, `description`) followed by markdown instructions. This format is a de facto standard across Claude Code, Codex CLI, Gemini CLI, and Cursor — write once, use everywhere.
+The `SKILL.md` file uses YAML frontmatter (`name`, `description`) followed by markdown instructions. This format works across all major agents — write once, use everywhere.
 
 | Agent | Project skills dir | Personal skills dir | Invoke |
 |-------|-------------------|---------------------|--------|
@@ -132,9 +143,7 @@ The `SKILL.md` file uses YAML frontmatter (`name`, `description`) followed by ma
 | Gemini CLI | `.gemini/skills/` | `~/.gemini/skills/` | `/skill-name` |
 | Cursor | `.cursor/skills/` | `~/.cursor/skills/` | `/skill-name` |
 
-## Stay Connected
-
-This repo is the companion to my [Substack](https://jaydermody.substack.com/) where I write about AI transformation of product management. Subscribe for regular updates on new skills, workflow changes, and lessons learned.
+---
 
 ## License
 
