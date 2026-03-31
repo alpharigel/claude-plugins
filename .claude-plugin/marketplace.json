@@ -24,6 +24,21 @@
       "category": "testing"
     },
     {
+      "name": "foundry",
+      "source": {
+        "source": "github",
+        "repo": "alpharigel/foundry"
+      },
+      "description": "Remote iOS build & test — connect to a Mac with Xcode and iOS Simulators via Claude-to-Claude channels",
+      "version": "1.0.0",
+      "author": {
+        "name": "alpharigel"
+      },
+      "license": "MIT",
+      "keywords": ["ios", "xcode", "simulator", "build", "remote", "channels"],
+      "category": "development"
+    },
+    {
       "name": "web-e2e-skill",
       "source": {
         "source": "github",

@@ -13,7 +13,9 @@ If you're coming from my [Substack](https://jaydermody.substack.com), welcome! T
 | Skill | Description |
 |-------|-------------|
 | [ios-e2e-skill](https://github.com/alpharigel/ios-e2e-skill) | End-to-end iOS app testing — UI automation, simulator management, accessibility-driven interactions |
+| [web-e2e-skill](https://github.com/alpharigel/web-e2e-skill) | End-to-end web app testing — Playwright setup, test patterns, and common recipes |
 | [ios-feedback-skill](https://github.com/alpharigel/ios-feedback-skill) | Add an in-app feedback button with automatic GitHub issue creation |
+| [home-assistant-skill](https://github.com/alpharigel/claude-skill-homeassistant) | Home Assistant configuration management — deployment workflows, automation verification, dashboard development |
 
 Have a skill you'd like to share? Open a PR or issue — contributions welcome.
 
@@ -30,6 +32,7 @@ Add as a plugin marketplace, then install individual skills:
 ```
 /plugin marketplace add alpharigel/agent-skills
 /plugin install ios-e2e-skill
+/plugin install web-e2e-skill
 /plugin install ios-feedback-skill
 ```
 
@@ -49,6 +52,7 @@ Clone into your project's `.agents/skills/` directory:
 ```bash
 mkdir -p .agents/skills
 git clone https://github.com/alpharigel/ios-e2e-skill.git .agents/skills/ios-e2e-skill
+git clone https://github.com/alpharigel/web-e2e-skill.git .agents/skills/web-e2e-skill
 git clone https://github.com/alpharigel/ios-feedback-skill.git .agents/skills/ios-feedback-skill
 ```
 
@@ -74,6 +78,7 @@ Clone into your project's `.gemini/skills/` directory:
 ```bash
 mkdir -p .gemini/skills
 git clone https://github.com/alpharigel/ios-e2e-skill.git .gemini/skills/ios-e2e-skill
+git clone https://github.com/alpharigel/web-e2e-skill.git .gemini/skills/web-e2e-skill
 git clone https://github.com/alpharigel/ios-feedback-skill.git .gemini/skills/ios-feedback-skill
 ```
 
@@ -99,6 +104,7 @@ Clone into your project's `.cursor/skills/` directory:
 ```bash
 mkdir -p .cursor/skills
 git clone https://github.com/alpharigel/ios-e2e-skill.git .cursor/skills/ios-e2e-skill
+git clone https://github.com/alpharigel/web-e2e-skill.git .cursor/skills/web-e2e-skill
 git clone https://github.com/alpharigel/ios-feedback-skill.git .cursor/skills/ios-feedback-skill
 ```
 
