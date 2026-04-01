@@ -26,8 +26,9 @@
     {
       "name": "foundry",
       "source": {
-        "source": "github",
-        "repo": "alpharigel/foundry"
+        "source": "git-subdir",
+        "url": "alpharigel/foundry",
+        "path": "client"
       },
       "description": "Remote iOS build & test — connect to a Mac with Xcode and iOS Simulators via Claude-to-Claude channels",
       "version": "1.0.0",
